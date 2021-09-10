@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+  
+}
+.container{
+  display: grid;
+  grid-gap: 15px;
+  grid-template-rows: 70px 1fr ;
+  grid-template-columns: 300px 1fr ;
+  grid-template-areas: 
+    "header header"
+    "navbar main";
+  width: 1200px;
+  margin: auto;
+}
+.header{
+  grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 0 30px;
+
+  border-radius: 0 0 5px 5px;
+  background-color: rgb(66, 127, 197);
+}
+.header__logo{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header__logo img{
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.navbar{
+  grid-area: navbar;
+
+  border-radius: 5px;
+  background-color: rgb(245, 245, 245);
+}
+
+.main{
+  grid-area: main;
+
+  border-radius: 5px;
+  background-color: rgb(245, 245, 245);
+}
+.BackgroundProfile{
+  min-height: 200px;
+  background-image: url(https://lh3.googleusercontent.com/proxy/I-EB9jWHrRT1D5x4_J0rxtyzZoIrXuxNC_XqxK1e6nCyhUvQlt5EGuC_rI9fbwjudFAKRH7zL9CZMFrqA-heFST8xBJzuTCYqg);
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar{
+  padding: 20px;
+}
+.navbar nav{
+  text-align: left;
+}
+.navbar__link{
+  
+  list-style: none;
+}
+.navbar__link a{
+  padding: 10px 13px;
+  display: block;
+  /* width: 100%; */
+
+  background-color: tranparent;
+  color: rgb(98, 122, 131);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all .2s ease;
+}
+.navbar__link a:hover{
+  
+  background-color: rgb(231, 231, 231);
+}
