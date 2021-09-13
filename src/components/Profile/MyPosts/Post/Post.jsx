@@ -1,7 +1,7 @@
 import s from './Post.module.css'
 import avatar from '../../../../avatar.png'
 
-const Posts = (props) => {
+const Post = (props) => {
     return (
         <li className={s.post}>
             <div className={s.left}>
@@ -16,4 +16,4 @@ const Posts = (props) => {
     )
 }
 
-export default Posts
+export default Post
