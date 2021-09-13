@@ -1,0 +1,19 @@
+.header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0 30px;
+
+    border-radius: 0 0 5px 5px;
+    background-color: rgb(66, 127, 197);
+}
+.logo__container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.logo{
+    display: block;
+    width: 40px;
+    height: 40px;
+}

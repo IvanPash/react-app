@@ -1,0 +1,35 @@
+.post{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+.left{
+    margin-right: 20px;
+}
+.avatar{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+.comment{
+    padding: 10px;
+    margin: 4px 0 0 0;
+    min-width: 100px;
+    background-color: rgb(224, 229, 233);
+    border-radius: 5px;
+    
+}
+.name{
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(119, 119, 119);
+    margin-right: 20px;
+}
+.likeCount{
+    font-size: 12px;
+    font-weight: 700;
+    color: rgb(143, 143, 143);
+    float: right;
+    margin-top: 3px;
+}
