@@ -13,7 +13,7 @@ const App = (props) => {
           <Header />
           <Navbar state={props.state.NavBar}/>
           <div className="main">
-            <Route path="/profile" render={() => <Profile state={props.state.ProfilePage}/>} /> 
+            <Route path="/profile" render={() => <Profile state={props.state.ProfilePage} AddPost={props.AddPost} UpdateValueTextarea={props.UpdateValueTextarea}/>} /> 
             <Route path="/dialogs" render={() => <Dialogs state={props.state.DialogsPage}/>} /> 
           </div>
         </div>
