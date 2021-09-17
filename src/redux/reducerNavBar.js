@@ -14,7 +14,6 @@ const initState = {
 }
 
 let reducerNavBar = (state = initState, action) => {
-  debugger
   return state
 }
 

@@ -28,7 +28,6 @@ const initState = {
 };
 
 let reducerDialogs = (state = initState, action) => {
-  debugger
   return state
 };
 

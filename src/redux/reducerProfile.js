@@ -16,10 +16,9 @@ const initState = {
 };
 
 let reducerProfile = (state = initState, action) => {
-  debugger
   switch (action.type) {
     case ADD_POST:
-      if (!state.actualValueTextarea) return;
+      if (!state.actualValueTextarea) return state;
       let NewPost = {
         comment: state.actualValueTextarea,
         name: "IvPas",

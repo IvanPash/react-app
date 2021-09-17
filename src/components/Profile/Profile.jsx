@@ -1,13 +1,13 @@
 import s from './Profile.module.css'
 import avatar from './../../avatar.png'
-import MyPosts from './MyPosts/MyPosts'
+import MyPostsContainer from './MyPosts/MyPostsContainer'
 import ProfileInfo from './ProfileInfo/ProfileInfo'
 
-const Profile = (props) => {
+const Profile = () => {
   return (
     <div className={`${s.profile} containerMain`}>
       <ProfileInfo />
-      <MyPosts state={props.state} dispatch={props.dispatch}/>
+      <MyPostsContainer />
     </div>
   )
 }
