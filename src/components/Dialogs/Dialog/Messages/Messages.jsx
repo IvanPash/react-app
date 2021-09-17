@@ -1,7 +1,8 @@
-import s from './Dialog.module.css'
-import avatar from '../../../avatar.png'
+import s from './Messages.module.css'
+// import avatar from '../../../../avatar.png'
 
 const Messages = (props) => {
+	debugger
 	return (
 		<div className={s.messages}>
 

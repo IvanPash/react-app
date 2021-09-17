@@ -7,7 +7,7 @@ const Profile = (props) => {
   return (
     <div className={`${s.profile} containerMain`}>
       <ProfileInfo />
-      <MyPosts state={props.state.posts} AddPost={props.AddPost} UpdateValueTextarea={props.UpdateValueTextarea}/>
+      <MyPosts state={props.state} dispatch={props.dispatch}/>
     </div>
   )
 }
