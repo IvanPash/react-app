@@ -6,7 +6,7 @@ const Dialog = (props) => {
 	return (
 		<NavLink to={"/messages/" + props.id}>
 			<li className={s.dialogItem}>
-				<a className={s.dialogLink} href="#">
+				<div className={s.dialogLink}>
 					<div className={s.left}>
 						<img className={s.avatar} src={avatar} />
 					</div>
@@ -15,7 +15,7 @@ const Dialog = (props) => {
 						<p className={s.message}>{props.message}</p>
 					</div>
 					<span className={s.timeMessage}>{props.timeMessage}</span>
-				</a>
+				</div>
 			</li>
 		</NavLink>
 	)

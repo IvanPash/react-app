@@ -1,0 +1,46 @@
+
+.user{
+  position: relative;
+  background-color: rgb(238, 240, 241);
+  width: 16%;
+  margin: 0 0px 20px 0px;
+  border-radius: 5px;
+  padding: 10px 10px 60px 10px;
+}
+.followed{
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  padding: 10px 0px;
+
+  background-color: rgb(228, 230, 231);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .15s ease;
+  font-weight: 600;
+  text-transform: lowercase;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.4);
+  
+}
+.followed:hover{
+  background-color: rgb(219, 220, 221);
+}
+.status{
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.userPhoto{
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: auto;
+}
+.name{
+  margin-top: 8px;
+  text-align: center;
+}

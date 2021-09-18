@@ -1,30 +1,25 @@
 import React from "react";
-import MyContext from "../../../context";
+import { connect } from "react-redux";
 import { AddPostAC, UpdateValueTextareaAC } from "../../../redux/reducerProfile";
 import MyPosts from "./MyPosts";
 
-const MyPostsContainer = () => {
-  return (
-    <MyContext.Consumer>
-      { store => {
-        debugger
-        let ChangeTextareaUI = (value) => {
-          store.dispatch(UpdateValueTextareaAC(value));
-        };
-        let AddPostLocalUI = () => {
-          store.dispatch(AddPostAC());
-        };
 
-        return (
-          <MyPosts
-            ChangeTextareaUI={ChangeTextareaUI}
-            AddPostLocalUI={AddPostLocalUI}
-            state={store.getState().ProfilePage}
-          />
-        );
-      }}
-    </MyContext.Consumer>
-  );
+const mapStateToProps = (state) => {
+  return {
+    state: state.ProfilePage
+  };
 };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    ChangeTextareaUI: (value) => {
+        dispatch(UpdateValueTextareaAC(value));
+    },
+    AddPostLocalUI: () => {
+        dispatch(AddPostAC());
+    }
+  };
+};
+
+const MyPostsContainer = connect(mapStateToProps, mapDispatchToProps) (MyPosts);
 
 export default MyPostsContainer;

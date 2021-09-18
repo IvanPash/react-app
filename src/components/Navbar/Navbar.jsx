@@ -4,7 +4,7 @@ import s from './Navbar.module.css'
 
 const Navbar = (props) => {
   
-  let linksElement = props.state.links.map( el => <li className={s.link}><NavLink id={el.id} to={el.url}>{el.text}</NavLink></li>)
+  let linksElement = props.state.links.map( el => <li key={el.id} className={s.link}><NavLink id={el.id} to={el.url}>{el.text}</NavLink></li>)
 
   return (
     <div className={s.link__container}>

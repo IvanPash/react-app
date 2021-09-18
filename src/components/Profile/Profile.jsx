@@ -1,5 +1,4 @@
 import s from './Profile.module.css'
-import avatar from './../../avatar.png'
 import MyPostsContainer from './MyPosts/MyPostsContainer'
 import ProfileInfo from './ProfileInfo/ProfileInfo'
 

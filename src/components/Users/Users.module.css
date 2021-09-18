@@ -1,0 +1,25 @@
+.users{
+
+}
+.usersWrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.loadUsers{
+  width: 150px;
+  padding: 10px 0px;
+
+  background-color: rgb(228, 230, 231);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .15s ease;
+  font-weight: 600;
+  text-transform: lowercase;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.loadUsers:hover{
+  background-color: rgb(219, 220, 221);
+}
