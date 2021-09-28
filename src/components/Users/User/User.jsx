@@ -9,7 +9,7 @@ let User = (props) => {
       <span className={s.status}>{props.status}</span>
       <button
         className={s.followed}
-        onClick={props.followed ? () => props.unfollowUI(props.id) : () => props.followUI(props.id)}
+        onClick={props.followed ? () => props.unfollowUser(props.id) : () => props.followUser(props.id)}
       >
         {props.followed ? "Отписаться" : "Подписаться"}
       </button>
