@@ -6,3 +6,17 @@
   background-size: cover;
   margin: -30px -30px 0 -30px;
 }
+.description{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+.descriptionLeft{
+  margin-right: 20px;
+}
+.photoProfile{
+  border-radius: 50%;
+}
+.detailDescription{
+  margin-top: 30px;
+}

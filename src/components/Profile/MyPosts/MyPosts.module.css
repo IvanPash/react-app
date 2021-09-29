@@ -4,3 +4,9 @@
 .posts{
     padding: 0;
 }
+.postsContainer{
+    margin-top: 30px;
+}
+.myPosts{
+    margin-bottom: 20px;
+}

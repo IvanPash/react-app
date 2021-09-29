@@ -1,6 +1,3 @@
-const ADD_POST = "ADD-POST";
-const UPDATE_VALUE_TEXTAREA = "UPDATE-VALUE-TEXTAREA";
-
 const initState = {
   posts: [
     { id: 1, comment: "Первый коммент", name: "IvPas", likeCount: "3" },
@@ -10,10 +7,21 @@ const initState = {
       name: "Дмитрый Дыров",
       likeCount: "5",
     },
-    { id: 3, comment: "Третий и так и сяк", name: "Алексей Юдин", likeCount: "0" },
-    { id: 4, comment: "А четвертый случайно сюда попал", name: "Anonimus", likeCount: "13" },
+    {
+      id: 3,
+      comment: "Третий и так и сяк",
+      name: "Алексей Юдин",
+      likeCount: "0",
+    },
+    {
+      id: 4,
+      comment: "А четвертый случайно сюда попал",
+      name: "Anonimus",
+      likeCount: "13",
+    },
   ],
   actualValueTextarea: "",
+  profile: null,
 };
 
 let reducerProfile = (state = initState, action) => {
@@ -37,13 +45,21 @@ let reducerProfile = (state = initState, action) => {
     case UPDATE_VALUE_TEXTAREA:
       stateCopy.actualValueTextarea = action.text;
       return stateCopy;
+    case SET_PROFILE:
+      stateCopy.profile = action.profile;
+      return stateCopy;
 
     default:
       return state;
   }
 };
 
+const ADD_POST = "ADD_POST";
+const UPDATE_VALUE_TEXTAREA = "UPDATE_VALUE_TEXTAREA";
+const SET_PROFILE = "SET_PROFILE";
+
 export const AddPostAC = () => ({ type: ADD_POST });
 export const UpdateValueTextareaAC = (data) => ({ type: UPDATE_VALUE_TEXTAREA, text: data });
+export const setProfile = (profile) => ({ type: SET_PROFILE,  profile });
 
 export default reducerProfile;
