@@ -1,23 +1,16 @@
 import * as axios from "axios";
 import { connect } from "react-redux";
 import React from "react";
-import {
-  setUsers,
-  followUser,
-  unfollowUser,
-  setPage,
-  setTotalCount,
-  setStatusPreloader,
-} from "../../redux/reducerUsers";
+import { setUsers, followUser, unfollowUser, setPage, setTotalCount, setStatusPreloader } from "../../redux/reducerUsers";
 import Users from "./Users";
 
 class UsersContainer extends React.Component {
   componentDidMount() {
     this.props.setStatusPreloader(true);
     axios
-      .get(
-        `https://social-network.samuraijs.com/api/1.0/users?count=${this.props.count}&page=${this.props.page}`
-      )
+      .get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.count}&page=${this.props.page}`, {
+        withCredentials: true,
+      })
       .then((response) => {
         this.props.setUsers(response.data.items);
         this.props.setTotalCount(response.data.totalCount);
@@ -27,13 +20,13 @@ class UsersContainer extends React.Component {
   onPageChange = (page) => {
     this.props.setPage(page);
     this.props.setStatusPreloader(true);
-    axios
-      .get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.count}&page=${page}`)
-      .then((response) => {
-        this.props.setUsers(response.data.items);
-        this.props.setTotalCount(response.data.totalCount);
-        this.props.setStatusPreloader(false);
-      });
+    axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${this.props.count}&page=${page}`, {
+        withCredentials: true,
+      }).then((response) => {
+      this.props.setUsers(response.data.items);
+      this.props.setTotalCount(response.data.totalCount);
+      this.props.setStatusPreloader(false);
+    });
   };
 
   render() {
